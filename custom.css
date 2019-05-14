@@ -1,0 +1,182 @@
+
+body{
+	background-color: #034937;
+	margin:0;
+	font-family: 'Nunito Sans', sans-serif;
+	color: #fff;
+	border-bottom: 10px solid #f2c7b6;
+}
+header{
+	background: #f2c7b6;
+	text-align: center;
+}
+header img{
+	max-height: 130px;
+}
+
+.box1{
+	background-image: url(img/gisela-pitura.png);
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 480px; 
+}
+
+.sello{
+	text-align: right;
+}
+.sello img{
+	margin-top: 300px;
+	margin-right: 40px;
+}
+
+.contenido{
+	width: 100%;
+	max-width: 940px;
+	margin: 20px auto;
+	padding: 25px;
+	text-align: center;
+}
+h1,
+h2{
+	font-size: 24px;
+	margin: 0;
+	color: #fff;
+}
+h3{
+	text-align: center;
+	font-weight: 300;
+	margin: 0;
+	font-size: 24px;
+}
+.contenido h1{
+	font-weight: 300;
+	font-size: 33px;
+	line-height: 38px;
+	text-transform: uppercase;
+}
+.contenido h2{
+	font-weight: 700;
+}
+p{
+	color:#fff;
+	font-size: 18px;
+	font-weight: 500;
+	margin: 20px 0;
+}
+.destacado{
+	font-family: 'Abril Fatface', cursive;
+	letter-spacing: 1px;
+}
+
+ul.lista{
+	list-style: none;
+	font-weight: 100;
+	text-align: left;
+	margin: 50px auto;
+	line-height: 20px;
+	max-width: 420px;
+	padding: 0;
+	letter-spacing: 1px;
+	font-size: 14px;
+}
+
+
+.info{
+	display: block;
+	width: 100%;
+}
+.date {
+	height: 110px;
+	display: inline-block;
+	margin: 20px;
+}
+.date img {
+	max-height: 80px;
+}
+.date:nth-child(3) {
+	margin: 20px 0;
+}
+.date:nth-child(3) img {
+	max-width: 100%;
+}
+
+.contact{
+	display: table;
+	width: 100%;
+	max-width: 940px;
+	margin: 60px auto 30px;
+}
+.contact-cel{
+	display: inline-block;
+	text-align: center;
+	width: 25%;
+}
+.contact-cel img{
+	max-height: 20px;
+	position: relative;
+	top: 5px;
+}
+.contact-cel a{
+	color: #fff;
+	text-decoration: none;
+}
+
+@media (max-width: 768px){
+	.contenido,
+	.contact{
+		max-width: 680px;
+	}
+	.box1{
+		height: 360px;
+	}
+	.sello img{
+		margin-top: 180px;
+	}
+	.contenido h1{
+		padding: 20px 90px;
+	}
+	.contact-cel {
+		display: block;
+		width: 100%;
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 480px) {
+	.contenido h1{
+		padding: 0;
+		font-size: 28px;
+		line-height: 34px;
+		margin-bottom: 10px;
+	}
+	.box1{
+		max-height: 180px
+	}
+	.contenido{
+		width: 80%;
+	}
+	.sello{
+		height: 80px;
+	}
+	.sello img{
+		max-height: 100%;
+		margin-top: 90px;
+		margin-right: 15px;
+	}
+	.date{
+		display: block;
+	}
+	ul.lista{
+		line-height: 15px;
+	}
+	ul.lista li{
+		margin-bottom: 10px;
+	}
+	.contact-cel{
+		display: block;
+		width: 100%;
+		margin: 10px auto;
+	}
+}
