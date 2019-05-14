@@ -3,9 +3,9 @@ if(isset($_POST['boton'])){
     if($_POST['nombre'] == ''){
         $errors[1] = '<span class="error">Ingrese su nombre</span>';
     }else if($_POST['email'] == '' or !preg_match("/^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/",$_POST['email'])){
-        $errors[3] = '<span class="error">Ingrese un email correcto</span>';
+        $errors[2] = '<span class="error">Ingrese un email correcto</span>';
     }else if($_POST['telefono'] == '' or !preg_match("/^[0-9]+$/",$_POST['telefono'])){
-        $errors[4] = '<span class="error">Ingrese un teléfono</span>';
+        $errors[3] = '<span class="error">Ingrese un teléfono</span>';
     }else{
 
 $dest = "carlos.montes.c@gmail.com"; //Email de destino
@@ -92,18 +92,18 @@ if(mail($dest,$asunto,$cuerpo,$headers)){
     <form class='contacto' method='POST' action="" id="formulario">
         <div>
             <label>Nombre:</label>
-            <input type='text' class='nombre' name='nombre' placeholder="ingresa tu Nombre Apellidio" value='<?php if(isset($_POST['nombre'])){ echo $_POST['nombre']; } ?>'>
+            <input type='text' class='nombre' name='nombre' placeholder="ingresa tu Nombre Apellido" value='<?php if(isset($_POST['nombre'])){ echo $_POST['nombre']; } ?>'>
             <?php if(isset($errors)){ echo $errors[1]; } ?>
         </div>
         <div>
             <label>Tu Email:</label>
-            <input type='text' class='email' name='email' placeholder="ingresa un email valido" value='<?php if(isset($_POST['email'])){ $_POST['email']; } ?>'>
-            <?php if(isset($errors)){ echo $errors[3]; } ?>
+            <input type='text' class='email' name='email' placeholder="ingresa un email válido" value='<?php if(isset($_POST['email'])){ $_POST['email']; } ?>'>
+            <?php if(isset($errors)){ echo $errors[2]; } ?>
         </div>
         <div>
             <label>Teléfono:</label>
-            <input type='text' class='telefono' name='telefono' placeholder="ingresa tu teléfono" value='<?php if(isset($_POST['telefono'])){ $_POST['telefono']; } ?>'>
-            <?php if(isset($errors)){ echo $errors[4]; } ?>
+            <input type='tel' class='telefono' name='telefono' placeholder="ingresa tu teléfono" value='<?php if(isset($_POST['telefono'])){ echo $_POST['telefono']; } ?>'>
+            <?php if(isset($errors)){ echo $errors[3]; } ?>
         </div>
         <div class="btn">
             <input type='submit' value='Enviar' class='boton' name='boton'>

@@ -20,18 +20,24 @@ form{
 .contacto div{
 	margin-bottom: 15px;
 }
-.contacto input[type='text'], .contacto textarea{
+.contacto input[type='text'],
+.contacto input[type='tel'],
+.contacto textarea{
 	padding: 7px 6px;
 	width: 100%;
 	border: 1px solid #CED5D7;
 	resize: none;
 	margin: 5px 0;
 }
-.contacto input[type='text']:focus, .contacto textarea:focus{
+.contacto input[type='text']:focus,
+.contacto input[type='tel']:focus,
+.contacto textarea:focus{
 	outline: none;
 	box-shadow:0 0 0 3px #dde9ec;
 }
-.contacto input[type='text'].invalido, .contacto textarea.invalido{
+.contacto input[type='text'].invalido,
+.contacto input[type='tel'].invalido, 
+.contacto textarea.invalido{
 	box-shadow:0 0 0 3px #FFC9C9;
 }
 .contacto input[type='submit']{

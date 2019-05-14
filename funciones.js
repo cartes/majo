@@ -1,5 +1,5 @@
 $(function() { 
-	var emailreg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;	
+	var emailreg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,3})?$/;	
 	$(".boton").click(function(){  
 		$(".error").fadeOut().remove();
 		
@@ -11,16 +11,12 @@ $(function() {
 			$(".email").focus().after('<span class="error">Ingrese un email correcto</span>');  
 			return false;  
 		}  
-        if ($(".asunto").val() == "") {  
-			$(".asunto").focus().after('<span class="error">Ingrese un asunto</span>');  
+        if ($(".telefono").val() == "") {  
+			$(".telefono").focus().after('<span class="error">Ingrese un teléfono</span>');  
 			return false;  
-		}  
-        if ($(".mensaje").val() == "") {  
-			$(".mensaje").focus().after('<span class="error">Ingrese un mensaje</span>');   
-			return false;  
-		}  
+		}    
     });  
-	$(".nombre, .asunto, .mensaje").bind('blur keyup', function(){  
+	$(".nombre, .telefono").bind('blur keyup', function(){  
         if ($(this).val() != "") {  			
 			$('.error').fadeOut();
 			return false;  
